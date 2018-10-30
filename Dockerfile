@@ -3,6 +3,7 @@ ENV DEBIAN_FRONTEND noninteractive
 MAINTAINER elonlee
 ADD frp_0.21.0_linux_amd64 /tmp/frp
 ADD run.sh /tmp/run.sh
+ADD frpc.ini /tmp/frpc.ini
 EXPOSE 80 443 7777 8888
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y --no-install-recommends tinyproxy
