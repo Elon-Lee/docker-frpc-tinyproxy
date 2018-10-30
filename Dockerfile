@@ -16,6 +16,5 @@ RUN set -ex \
    && cd /tmp \
    && install -v -D frp/frps /bin/frps \
    && install -v -D frp/frpc /bin/frpc \
-   && install -v -D frps.ini /bin/frps.ini \
    && install -v -D frpc.ini /bin/frpc.ini
 ENTRYPOINT ["/tmp/run.sh"]
