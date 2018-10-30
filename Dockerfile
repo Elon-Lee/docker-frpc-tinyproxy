@@ -6,7 +6,7 @@ ADD run.sh /tmp/run.sh
 EXPOSE 80 443 7777 8888
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y --no-install-recommends tinyproxy
-RUN apt-get install lsof
+RUN apt-get install -y --no-install-recommends lsof
 RUN mkdir /var/run/tinyproxy && \
     chown nobody /var/run/tinyproxy
 RUN touch /var/log/tinyproxy/tinyproxy.log && \
